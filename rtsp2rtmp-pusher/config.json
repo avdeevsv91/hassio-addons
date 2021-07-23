@@ -16,5 +16,5 @@
       { "source": "str", "target": "str", "video": "str?", "audio": "str?", "options": "str?" }
     ]
   },
-  "url": "https://github.com/avdeevsv91/hassio-addons/tree/master/rtsp2rtmp-pusher"
+  "url": "https://github.com/avdeevsv91/hassio-addons/tree/main/rtsp2rtmp-pusher"
 }
