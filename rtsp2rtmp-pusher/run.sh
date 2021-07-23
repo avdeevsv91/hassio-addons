@@ -25,8 +25,19 @@ for stream in $(bashio::config "streams|keys"); do
 done
 
 # Wait ffmpeg(s)
-for pid in ${pids[@]}; do
-    wait ${pid}
-    message "stream with PID = ${pid} has stopped."
+while :; do
+    counter=0
+    for i in ${!pids[@]}; do
+        if [[ ${pids[$i]} -gt 0 ]]; then
+            if kill -0 ${pids[$i]} > /dev/null 2>&1; then
+                ((counter+=1))
+            else
+                message "stream with PID = ${pids[$i]} has been stopped."
+                pids[$i]=0
+            fi
+            sleep 1
+        fi
+    done
+    [ ${counter} -eq 0 ] && break
 done
 message "all streams are stopped."
