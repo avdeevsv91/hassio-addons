@@ -1,0 +1,20 @@
+{
+  "name": "RTSP to RTMP Pusher",
+  "version": "v1.0.0",
+  "slug": "rtsp2rtmp-pusher",
+  "description": "Pushing the RTSP stream to the RTMP server",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "application",
+  "boot": "auto",
+  "options": {
+    "streams": [
+      { "source": "rtsp://<source_address>", "target": "rtmp://<target_address>" }
+    ]
+  },
+  "schema": {
+    "streams": [
+      { "source": "str", "target": "str", "video": "str?", "audio": "str?", "options": "str?" }
+    ]
+  },
+  "url": "https://github.com/avdeevsv91/hassio-addons/tree/master/rtsp2rtmp-pusher"
+}
