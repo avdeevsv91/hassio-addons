@@ -1,6 +1,6 @@
 {
   "name": "RTSP to RTMP Pusher",
-  "version": "v1.0.2",
+  "version": "v1.0.1",
   "slug": "rtsp2rtmp-pusher",
   "description": "Pushing the RTSP stream to the RTMP server",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
