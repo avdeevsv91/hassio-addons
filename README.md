@@ -1,6 +1,6 @@
 # hassio-addons
 
-[![Donate](https://img.shields.io/badge/donate-Yandex-red.svg)](https://money.yandex.ru/to/4100110221014297)
+[![Donate](https://img.shields.io/badge/donate-YooMoney-blueviolet.svg)](https://yoomoney.ru/to/4100110221014297)
 
 Hass.io add-ons by Sergey Avdeev.
 
