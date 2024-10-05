@@ -1,0 +1,53 @@
+name: "iSpy Agent DVR"
+version: 0.94
+slug: ispy_agent_dvr
+apparmor: true
+description: "iSpy is the world’s most popular open source video surveillance application. It's compatible with the the vast majority of consumer webcams and IP cameras."
+arch:
+  - amd64
+  - aarch64
+map:
+  - share:rw
+url: "https://www.ispyconnect.com/"
+ports:
+  8090/tcp: 8090
+  3478/udp: 3478
+  50000/udp: 50000
+  50001/udp: 50001
+  50002/udp: 50002
+  50003/udp: 50003
+  50004/udp: 50004
+  50005/udp: 50005
+  50006/udp: 50006
+  50007/udp: 50007
+  50008/udp: 50008
+  50009/udp: 50009
+  50010/udp: 50010
+#image: ljsquare/ispy_agent_dvr
+init: false
+webui: http://[HOST]:[PORT:8090]
+watchdog: http://[HOST]:[PORT:8090]
+ports_description:
+  8090/tcp: "Default port, don't change"
+  3478/udp: "Default port, don't change"
+  50000/udp: "Default port, don't change"
+  50001/udp: "Default port, don't change"
+  50002/udp: "Default port, don't change"
+  50003/udp: "Default port, don't change"
+  50004/udp: "Default port, don't change"
+  50005/udp: "Default port, don't change"
+  50006/udp: "Default port, don't change"
+  50007/udp: "Default port, don't change"
+  50008/udp: "Default port, don't change"
+  50009/udp: "Default port, don't change"
+  50010/udp: "Default port, don't change"
+video: true
+usb: true
+options:
+  override: false
+  folder: ispy
+schema:
+  override: bool
+  folder: str
+backup: cold
+hassio_api: true
